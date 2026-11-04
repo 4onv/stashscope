@@ -1,0 +1,266 @@
+{
+  "researchDate": "2026-11-03",
+  "timezone": "America/Chicago",
+  "windowUtc": {
+    "startInclusive": "2026-11-03T06:00:00Z",
+    "endExclusive": "2026-11-04T06:00:00Z"
+  },
+  "observedAtUtc": "2026-11-04T17:17:43.905Z",
+  "archivedObservation": {
+    "type": "Third-party archive, not GitHub's official historical endpoint",
+    "commit": "a8d9b89d35c15ec050fb3edd536dba7bc4cb5815",
+    "commitTime": "2026-11-03T09:05:25Z",
+    "url": "https://github.com/JackEasons/github-trending/blob/a8d9b89d35c15ec050fb3edd536dba7bc4cb5815/2026/2026-11-03.md",
+    "measurement": "Cumulative star totals displayed in one capture; not daily star gains.",
+    "generalList": [
+      {
+        "rank": 1,
+        "repository": "vercel-labs/agent-desktop",
+        "cumulativeStars": 11164
+      },
+      {
+        "rank": 2,
+        "repository": "thedotmack/claude-mem",
+        "cumulativeStars": 111158
+      },
+      {
+        "rank": 3,
+        "repository": "D4Vinci/Scrapling",
+        "cumulativeStars": 93557
+      },
+      {
+        "rank": 4,
+        "repository": "hyprwm/Hyprland",
+        "cumulativeStars": 40127
+      },
+      {
+        "rank": 5,
+        "repository": "Donchitos/Claude-Code-Game-Studios",
+        "cumulativeStars": 34010
+      },
+      {
+        "rank": 6,
+        "repository": "FlashML-org/FreeToken",
+        "cumulativeStars": 16352
+      },
+      {
+        "rank": 7,
+        "repository": "pingdotgg/t3code",
+        "cumulativeStars": 42778
+      },
+      {
+        "rank": 8,
+        "repository": "shiyu-coder/Kronos",
+        "cumulativeStars": 46163
+      },
+      {
+        "rank": 9,
+        "repository": "kornia/kornia",
+        "cumulativeStars": 12259
+      },
+      {
+        "rank": 10,
+        "repository": "JustVugg/colibri",
+        "cumulativeStars": 46829
+      },
+      {
+        "rank": 11,
+        "repository": "mattpocock/skills",
+        "cumulativeStars": 310648
+      },
+      {
+        "rank": 12,
+        "repository": "max-sixty/worktrunk",
+        "cumulativeStars": 10190
+      },
+      {
+        "rank": 13,
+        "repository": "paperclipai/paperclip",
+        "cumulativeStars": 110633
+      },
+      {
+        "rank": 14,
+        "repository": "karpathy/nanochat",
+        "cumulativeStars": 60094
+      },
+      {
+        "rank": 15,
+        "repository": "p-e-w/heretic",
+        "cumulativeStars": 38353
+      }
+    ]
+  },
+  "primaryYesterday": [
+    {
+      "url": "https://github.com/max-sixty/worktrunk/issues/4683",
+      "title": "Branch markers outlive their worktree and branch, so a reused branch name inherits a stale 🤖/💬",
+      "createdAt": "2026-11-03T22:40:12Z"
+    },
+    {
+      "url": "https://github.com/max-sixty/worktrunk/pull/4678",
+      "title": "fix(docs): stop move-changes after stash failures",
+      "createdAt": "2026-11-03T06:40:45Z",
+      "mergedAt": "2026-11-03T07:19:27Z",
+      "mergeCommit": "a8d0fdf84c63ed507be7767099b08361c9ed54ed"
+    },
+    {
+      "url": "https://github.com/max-sixty/worktrunk/pull/4679",
+      "title": "test: format fork remote URLs without spawning gh or glab",
+      "createdAt": "2026-11-03T08:04:09Z",
+      "mergedAt": "2026-11-03T08:34:37Z",
+      "mergeCommit": "365539a266d34bcbbf27106d9a8e4d166114f427"
+    },
+    {
+      "url": "https://github.com/max-sixty/worktrunk/issues/4681",
+      "title": "wt list: VS16 emoji in commit subjects (♻️, ⬆️) overflow the Message column, so rows wrap and the live table stacks stale frames",
+      "createdAt": "2026-11-03T10:35:20Z"
+    }
+  ],
+  "olderDemand": [
+    {
+      "url": "https://github.com/objectstack-ai/objectstack/issues/5742",
+      "createdAt": "2026-08-06T03:25:07Z",
+      "summary": "Reporter describes two agents interleaving shared stash pushes and popping each other's work. Demonstrates stash identity and intended destination are practical problems."
+    },
+    {
+      "url": "https://github.com/gsd-build/get-shit-done/issues/3542",
+      "createdAt": "2026-05-15T05:47:15Z",
+      "summary": "Reporter describes an agent popping an older shared stash after a no-change stash command, contaminating its worktree. Older context, not November 3 evidence."
+    }
+  ],
+  "ideas": [
+    {
+      "name": "StashScope",
+      "choice": "Selected",
+      "concept": "Read-only stash-to-worktree evidence matrix: stable stash SHA, touched paths, base/stashed/destination committed blob IDs and modes, dirty paths and untracked collisions. No application or claim of actual merge prediction.",
+      "demand": "Directly related to November 3 Worktrunk move-changes stash failure fix; older independent shared-stash incidents.",
+      "distinctValue": "Cross-worktree destination comparison with stable identity and explainable metadata. Reviewed stash tools focus on browsing and actions in the current working directory.",
+      "demo": "Tiny real temporary repository with multiple worktrees, an existing stash, a divergent destination, a dirty destination and a new-file collision; clearly label demonstration as generated.",
+      "discoverability": "Concrete 'which worktree fits this stash?' pitch for Git/worktree/agent users; complements Worktrunk rather than replacing it.",
+      "risks": "Snapshot is not atomic and does not prove safe application, ownership, intended branch, merge outcome or complete recovery. Should expose unknowns and unsupported states."
+    },
+    {
+      "name": "Worktree overlap map",
+      "choice": "Rejected",
+      "concept": "Compare committed, dirty and untracked path/hunk overlap across linked worktrees.",
+      "demand": "Worktrunk appeared in Nov3 archive and yesterday direct Trending; parallel worktree friction is concrete.",
+      "distinctValue": "Low without a stronger niche: Grove already does shared-base file/hunk/symbol/schema analysis, TUI and JSON/CI; herdr-collide includes dirty work and real merge prediction.",
+      "demo": "Easy generated multi-worktree fixture.",
+      "discoverability": "Broad problem but crowded direct competition; new basic version weaker than established tools."
+    },
+    {
+      "name": "Worktree preflight doctor",
+      "choice": "Rejected",
+      "concept": "Read-only inventory of unfinished operations, stale metadata, markers and potential cleanup hazards.",
+      "demand": "November3 Worktrunk4683 reports markers surviving removed worktrees/branches.",
+      "distinctValue": "Low for a general doctor: Tinkora already checks pointers, commondir, prunable/locked states, config and tracked status; Worktrunk has rich status.",
+      "demo": "Easy synthetic broken-topology fixture but careful platform compatibility required.",
+      "discoverability": "Clear search intent, however overlaps existing diagnostics and risks becoming a thin status wrapper."
+    }
+  ],
+  "competitors": [
+    {
+      "repository": "skeate/git-stashman",
+      "url": "https://github.com/skeate/git-stashman",
+      "readme": "https://github.com/skeate/git-stashman/blob/master/README.md",
+      "observedCapability": "TUI displays stash contents and offers apply/pop/drop. README explicitly says it warns when a stash does not apply cleanly to the current working directory.",
+      "difference": "StashScope focuses on comparing a stable stash identity against multiple linked worktrees using explained metadata; no mutate actions."
+    },
+    {
+      "repository": "shreyazh/gsm",
+      "url": "https://github.com/shreyazh/gsm",
+      "observedCapability": "Rust stash manager TUI; list, diff, files, apply/pop/drop/new and fuzzy search.",
+      "difference": "No cross-worktree compatibility matrix documented in reviewed README."
+    },
+    {
+      "repository": "Firehed/git-stash-browser",
+      "url": "https://github.com/Firehed/git-stash-browser",
+      "observedCapability": "Stash list and diff preview with drop confirmation.",
+      "difference": "No destination evidence comparison documented in reviewed README."
+    },
+    {
+      "repository": "NathanDrake2406/grove",
+      "url": "https://github.com/NathanDrake2406/grove",
+      "observedCapability": "Shared-base file/hunk/symbol/dependency/schema overlap detection; background daemon, TUI, JSON and CI mode.",
+      "difference": "Direct reason to reject generic overlap map."
+    },
+    {
+      "repository": "mcc0x/herdr-collide",
+      "url": "https://github.com/mcc0x/herdr-collide",
+      "observedCapability": "Read-only worktree pairing and temporary merge prediction with dirty work, Herdr integration and one-shot JSON.",
+      "difference": "Direct reason to reject generic overlap map."
+    },
+    {
+      "repository": "vigilanty0x/worktree-conflict-visualizer",
+      "url": "https://github.com/vigilanty0x/worktree-conflict-visualizer",
+      "observedCapability": "Finds overlap in declared path inventories and emits Mermaid; does not inspect Git.",
+      "difference": "More limited than live inspection but still a relevant overlap-map alternative."
+    },
+    {
+      "repository": "Tinkora/agent_worktree_doctor",
+      "url": "https://github.com/Tinkora/agent_worktree_doctor",
+      "observedCapability": "Offline read-only topology/metadata doctor with optional tracked-status checks.",
+      "difference": "Reason to reject general worktree doctor."
+    }
+  ],
+  "searchLimitations": "Repository searches were not exhaustive; absence in reviewed README is not proof a capability never exists. No stars promised. Today's rolling Trending snapshot is separate (rolling-observation.json).",
+  "previousDirectObservation": {
+    "type": "Direct public HTTP retrieval of GitHub daily Trending",
+    "retrievedAt": "2026-11-03T14:01:59Z",
+    "url": "https://github.com/trending?since=daily",
+    "entries": [
+      {
+        "rank": 1,
+        "repository": "thedotmack/claude-mem"
+      },
+      {
+        "rank": 2,
+        "repository": "vercel-labs/agent-desktop"
+      },
+      {
+        "rank": 3,
+        "repository": "max-sixty/worktrunk"
+      },
+      {
+        "rank": 4,
+        "repository": "JustVugg/colibri"
+      },
+      {
+        "rank": 5,
+        "repository": "mattpocock/skills"
+      },
+      {
+        "rank": 6,
+        "repository": "p-e-w/heretic"
+      },
+      {
+        "rank": 7,
+        "repository": "spotify/portal-ai-plugins"
+      },
+      {
+        "rank": 8,
+        "repository": "floci-io/floci"
+      },
+      {
+        "rank": 9,
+        "repository": "Usagi-org/ai-goofish-monitor"
+      },
+      {
+        "rank": 10,
+        "repository": "anomalyco/hex"
+      },
+      {
+        "rank": 11,
+        "repository": "D4Vinci/Scrapling"
+      },
+      {
+        "rank": 12,
+        "repository": "shiyu-coder/Kronos"
+      },
+      {
+        "rank": 13,
+        "repository": "Donchitos/Claude-Code-Game-Studios"
+      }
+    ]
+  }
+}
