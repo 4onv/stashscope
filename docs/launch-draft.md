@@ -10,7 +10,7 @@ It includes saved untracked files and exposes uncertain cases instead of claimin
 Try the synthetic demo with Node.js 22+ and Git 2.45+:
 
 ```sh
-npm install --global https://github.com/4onv/stashscope/releases/download/v0.1.0/4onv-stashscope-0.1.0.tgz
+npm install --global https://github.com/4onv/stashscope/releases/download/v0.1.1/4onv-stashscope-0.1.1.tgz
 stashscope demo
 ```
 

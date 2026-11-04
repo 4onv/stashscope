@@ -24,6 +24,8 @@ try {
   const demo = JSON.parse(raw);
   assert.equal(demo.synthetic, true);
   assert.equal(demo.worktrees.length, 3);
+  assert.deepEqual(demo.worktrees.map(w => w.path).sort(), ['<demo>/dirty', '<demo>/diverged', '<demo>/main']);
+  assert.ok(!raw.includes('stashscope-demo-'), 'Installed demo must not expose its temporary directory.');
   const statuses = new Set(demo.worktrees.flatMap(w => w.findings.map(f => f.status)));
   for (const status of ['base-match', 'diverged', 'local-changes', 'path-occupied']) assert.ok(statuses.has(status), `Missing ${status}`);
   const api = await import(pathToFileURL(path.join(prefix, 'node_modules/@4onv/stashscope/src/index.mjs')));

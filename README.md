@@ -25,13 +25,15 @@ StashScope does not simulate `git stash apply`, establish stash ownership, or re
 Requires **Node.js 22+ and Git 2.45+**. No runtime dependencies, account, API key or network calls during inspection.
 
 ```sh
-npm install --global https://github.com/4onv/stashscope/releases/download/v0.1.0/4onv-stashscope-0.1.0.tgz
+npm install --global https://github.com/4onv/stashscope/releases/download/v0.1.1/4onv-stashscope-0.1.1.tgz
 stashscope demo
 ```
 
 The demo creates three temporary worktrees, runs the actual inspector, then removes its
 generated repository. Your current repository is not involved. The package is distributed
 through GitHub releases; it is not published to npm.
+
+Version 0.1.1 fixes demo path labels on Windows and macOS. Stash inspection behavior is unchanged.
 
 Or run directly from source:
 

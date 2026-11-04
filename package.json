@@ -1,6 +1,6 @@
 {
   "name": "@4onv/stashscope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Inspect one Git stash across every linked worktree before choosing a recovery destination.",
   "type": "module",
   "license": "MIT",

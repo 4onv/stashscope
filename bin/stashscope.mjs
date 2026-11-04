@@ -40,7 +40,7 @@ try {
     console.log(help);
   } else if (args[0] === '--version') {
     if (args.length > 1) throw new Error('Unexpected arguments after --version.');
-    console.log('0.1.0');
+    console.log('0.1.1');
   } else {
     const command = args.shift();
     if (!['list', 'inspect', 'demo'].includes(command)) throw new Error(`Unknown command: ${command}`);
